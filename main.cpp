@@ -2,8 +2,10 @@
 
 int main(int argc, char* argv[])
 {
-    PackGLSL("shader.glsl");
-    PackDAE("Cube.dae");
+    //Hero::Editor::PackGLSL("shader.glsl");
+    Hero::Editor::PackDAE("Cube.dae");
     
+    system("pause");
+
     return 0;
 }

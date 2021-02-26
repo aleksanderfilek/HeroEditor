@@ -3,9 +3,22 @@
 
 #include<iostream>
 #include<fstream>
-#include<string>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+#include <cassert>
+#include <sstream>
 
-bool PackGLSL(const std::string path);
-bool PackDAE(const std::string path);
+#include"tinyxml\tinyxml.h"
+
+namespace Hero
+{
+    namespace Editor
+    {
+        bool PackGLSL(const std::string& path);
+        bool PackDAE(const std::string& path);
+    }
+}
 
 #endif

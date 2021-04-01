@@ -1,5 +1,6 @@
 @echo off
-g++ -c -Ilibs\ *.cpp
-g++ -c libs\tinyxml\*.cpp
+g++ -c -Iinclude -Ilibs source\*.cpp
+g++ -c -Ilibs libs\tinyxml\*.cpp
+g++ -c -Ilibs -Iinclude main.cpp
 g++ *.o
 del *.o

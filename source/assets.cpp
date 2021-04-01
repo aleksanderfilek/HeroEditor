@@ -82,7 +82,8 @@ bool PackGLSL(const std::string& path)
     return true;
 }
 
-bool PackDAE(const std::string& path)
+// brzydkie jak nie wiem, ale na razie wystarczy
+bool PackDAE(const std::string& path) 
 {
     TiXmlDocument doc(path.c_str());
     if(!doc.LoadFile())
@@ -173,7 +174,7 @@ bool PackDAE(const std::string& path)
     std::string newPath = path;
     newPath += "bin";
 
-    std::ofstream writeFile;
+    std::fstream writeFile;
     writeFile.open(newPath, std::ios::out | std::ios::binary);
 
     if(!writeFile.is_open())
@@ -192,7 +193,7 @@ bool PackDAE(const std::string& path)
     writeFile.write((const char*)uvVector.data(), uvCount*sizeof(float));
 
     writeFile.write((const char*)&faceCount, sizeof(int));
-    writeFile.write((const char*)faceVector.data(), faceCount*3*sizeof(int));
+    writeFile.write((const char*)faceVector.data(), faceCount*9*sizeof(int));
 
     writeFile.close();
 

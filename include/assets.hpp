@@ -10,7 +10,7 @@
 #include <cassert>
 #include <sstream>
 
-#include"tinyxml\tinyxml.h"
+#include"tinyxml/tinyxml.h"
 
 namespace Hero
 {

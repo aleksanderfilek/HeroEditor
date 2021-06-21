@@ -71,7 +71,7 @@ bool PackGLSL(const std::string& path)
 
     for(int i = 0; i < 3; i++){
         const std::string& str = shaderData[i];
-        size_t size = str.size();
+        uint32_t size = str.size();
 
         writeFile.write((const char*)&size, sizeof(size));
         writeFile.write(str.c_str(), size);
